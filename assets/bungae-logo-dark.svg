@@ -1,8 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 48" role="img" aria-label="번개컴퍼니 로고">
   <title>번개컴퍼니</title>
-  <rect x="2" y="4" width="40" height="40" rx="10" fill="#8FB0D1"/>
-  <path d="M25.5 8 13 26.2h7.2L19 38l12.5-18.4h-7.3L25.5 8z" fill="#0F151E"/>
-  <path d="M19.2 26.2h-3.4l3.1-4.2h3.4l-3.1 4.2z" fill="#FFC53D" opacity="0.95"/>
+  <defs>
+    <linearGradient id="bgd" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9DB9D9"/>
+      <stop offset="1" stop-color="#6E92B8"/>
+    </linearGradient>
+    <clipPath id="clip"><rect x="0" y="0" width="44" height="44" rx="11"/></clipPath>
+  </defs>
+  <g transform="translate(2,4) scale(0.9091)">
+  <g>
+    <rect x="0" y="0" width="44" height="44" rx="11" fill="url(#bgd)"/>
+    <g clip-path="url(#clip)">
+      <circle cx="22" cy="22" r="7.5" fill="none" stroke="#0F151E" stroke-width="1.1" opacity="0.35"/>
+      <circle cx="22" cy="22" r="10.51" fill="none" stroke="#0F151E" stroke-width="1.1" opacity="0.35"/>
+      <circle cx="22" cy="22" r="13.52" fill="none" stroke="#FFC53D" stroke-width="1.3" opacity="0.85"/>
+      <circle cx="22" cy="22" r="16.53" fill="none" stroke="#0F151E" stroke-width="1.1" opacity="0.35"/>
+    </g>
+    <mask id="m">
+      <rect x="0" y="0" width="44" height="44" fill="#fff"/>
+      <path d="M20.5 18.5 L22.8 18.5 L20 24.5 h-2.3 Z" fill="#000"/>
+      <path d="M24.3 25.5 L26.2 25.5 L23.4 31 L21.9 31 Z" fill="#000"/>
+    </mask>
+    <!-- mask-cut slits from base inner cuts -->
+    <path d="M28.5 4.5 L12.5 24.5 h8 L17 39.5 L32.5 20 h-8.5 L28.5 4.5 Z" fill="#0F151E" mask="url(#m)"/>
+    <path d="M35 13 l5 2.8 -5 1.2 Z" fill="#FFC53D"/>
+    <path d="M9 30.5 l-4 1.6 4 2 Z" fill="#FFC53D" opacity="0.9"/>
+  </g>
+  </g>
   <text x="50" y="26" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif" font-size="19" font-weight="800" letter-spacing="-0.02em" fill="#E6EDF5">번개컴퍼니</text>
   <text x="51" y="39" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="8" font-weight="700" letter-spacing="0.22em" fill="#97A6B9">BUNGAE COMPANY</text>
 </svg>
