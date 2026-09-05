@@ -1,33 +1,449 @@
-<!DOCTYPE html><html lang="ko" data-theme="light"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>번개컴퍼니 — 빠른 검증, 단단한 소프트웨어</title><meta name="description" content="번개컴퍼니 — 불필요한 군더더기를 걷어내고 핵심 제품을 가장 기민하게 구현하는 소프트웨어 테크 기업"><link rel="icon" href="data:,"><meta property="og:image" content="/assets/tigo-hero-studio.jpg"><script>
-    (function () {
-      try {
-        var saved = null; try { saved = localStorage.getItem('bungae-theme'); } catch (e2) {}
-        var theme = saved || 'light';
-        document.documentElement.setAttribute('data-theme', theme);
-      } catch (e) {}
-    })();
-</script><style>:root{--paper:#F6F7F9;--ink:#16212F;--muted:#5A6C80;--card:#FFFFFF;--line:#DFE5EC;--accent:#16365C;--accent-ink:#FFFFFF;--accent-soft:#E8EEF5;--eyebrow:#3D5A7A;--dark-paper:#0F151E;--dark-ink:#D6DDE6;--dark-muted:#97A6B9;--dark-card:#18222F;--dark-line:#2B3A4E;--dark-accent:#8FB0D1}html[data-theme=dark]{--paper:var(--dark-paper);--ink:var(--dark-ink);--muted:var(--dark-muted);--card:var(--dark-card);--line:var(--dark-line);--accent:var(--dark-accent);--accent-ink:#0F151E;--accent-soft:#1D2B3E;--eyebrow:var(--dark-accent)}*,*:before,*:after{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.7;font-family:-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Noto Sans KR,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit}.wrap{max-width:1080px;margin:0 auto;padding:0 24px}.prose{max-width:720px}header.site{border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:10}.nav{display:flex;align-items:center;gap:4px;min-height:64px}.brand{font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none;margin-right:auto;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:9px}.brand-mark{display:inline-flex;width:26px;height:26px;border-radius:7px;background:var(--accent);color:var(--accent-ink);align-items:center;justify-content:center;font-size:13px;line-height:1}.brand-mark svg{display:block}.menu-btn{display:none;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px 10px;font-size:16px;cursor:pointer;line-height:1;flex-shrink:0}.nav-links{display:flex;align-items:center;gap:2px}.nav a.link{text-decoration:none;padding:8px 13px;border-radius:8px;font-size:15px;font-weight:500;color:var(--muted);white-space:nowrap;flex-shrink:0}.nav a.link:hover{color:var(--ink);background:var(--accent-soft)}.nav a.link.active{color:var(--ink);background:var(--accent-soft)}.theme-btn{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:8px;padding:7px 13px;font-size:13px;font-weight:600;cursor:pointer;margin-left:8px;white-space:nowrap;flex-shrink:0}.theme-btn:hover{color:var(--ink);border-color:var(--muted)}.hero{padding:64px 0 48px}.eyebrow{color:var(--eyebrow);font-weight:700;letter-spacing:.14em;font-size:12px;text-transform:uppercase}.eyebrow:after{content:"";display:block;width:36px;height:2px;background:var(--accent);margin-top:10px;opacity:.55}.hero h1{font-size:clamp(28px,4vw,40px);line-height:1.32;letter-spacing:-.025em;margin:14px 0 14px;font-weight:800}.hero p.lead{font-size:17px;line-height:1.75;color:var(--muted);max-width:620px;margin:0}.cta-row{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}.btn{display:inline-block;text-decoration:none;border-radius:8px;padding:12px 22px;font-weight:700;font-size:15px;background:var(--accent);color:var(--accent-ink);border:1px solid var(--accent)}.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}.btn.ghost:hover{border-color:var(--muted)}section.block{padding:36px 0}section.block h2{font-size:22px;letter-spacing:-.02em;margin:0 0 6px;font-weight:800}section.block .sub{color:var(--muted);margin:0 0 20px;font-size:15px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px;text-decoration:none}.card h3{margin:0 0 8px;font-size:17px;letter-spacing:-.01em;line-height:1.5}.card h3 .num{display:block;font-size:11.5px;font-weight:700;letter-spacing:.12em;color:var(--eyebrow);margin-bottom:6px}.card p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.7}.card .meta{font-size:13px;color:var(--muted);margin-bottom:6px}.tag{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:1px 10px;margin:2px 4px 2px 0;color:var(--muted)}footer.site{border-top:1px solid var(--line);margin-top:48px;padding:28px 0 40px;color:var(--muted);font-size:13.5px;background:var(--card)}footer.site a{color:inherit}.crumb{font-size:13.5px;color:var(--muted);margin:24px 0 0}.crumb a{color:inherit}article.post h1{font-size:28px;line-height:1.45;letter-spacing:-.02em}article.post pre{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;overflow-x:auto;font-size:14px;line-height:1.7}article.post code{font-size:.9em}.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center}.hero-visual{display:flex;justify-content:center;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}.hero-visual img{width:100%;max-width:250px;height:auto}.corp-band{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}.corp-band .fact{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:14px 18px}.corp-band .fact b{display:block;font-size:21px;letter-spacing:-.02em}.corp-band .fact span{font-size:13px;color:var(--muted)}.tigo-card{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-top:24px}.tigo-card img{width:100%;max-width:150px;height:auto;border-radius:8px;background:var(--accent-soft)}.tigo-card h3{margin:0 0 6px;font-size:17px}.tigo-card p{margin:0;color:var(--muted);font-size:14.5px}.tigo-note{font-size:11.5px;color:var(--eyebrow);letter-spacing:.12em;font-weight:700;text-transform:uppercase;margin:0 0 6px}.page-hero{display:grid;grid-template-columns:1fr 200px;gap:28px;align-items:center;margin:24px 0 8px}.page-hero img{width:100%;max-width:200px;height:auto;justify-self:center;border-radius:12px;background:var(--accent-soft);border:1px solid var(--line);padding:12px}.svc-list{margin:8px 0 0;padding-left:20px;color:var(--muted);font-size:15px}@media(max-width:640px){.nav{flex-wrap:wrap;padding-top:8px;padding-bottom:8px;row-gap:4px}.brand{font-size:17px;margin-right:0}.theme-btn{order:2;margin-left:auto}.menu-btn{display:block;order:3;margin-left:8px}.nav-links{order:4;flex-basis:100%;display:none;flex-direction:column;align-items:stretch;gap:2px;padding:4px 0 2px}.nav-links.open{display:flex}.nav a.link{display:block;padding:10px 12px;font-size:15px}.hero{padding:44px 0 32px}.hero-grid{grid-template-columns:1fr}.hero-visual{order:-1;padding:20px}.hero-visual img{max-width:180px}.corp-band{grid-template-columns:1fr}.tigo-card{grid-template-columns:1fr;text-align:center}.tigo-card img{margin:0 auto}.page-hero{grid-template-columns:1fr}.page-hero img{max-width:170px;margin:0 auto}}</style></head> <body> <header class="site"> <div class="wrap nav"> <a class="brand" href="/"><span class="brand-mark"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span> 번개컴퍼니</a> <nav class="nav-links" id="primaryNav" aria-label="주요 메뉴"><a class="link" data-nav="services" href="/services/">서비스</a> <a class="link" data-nav="about" href="/about/">소개</a> <a class="link" data-nav="blog" href="/blog/">기술블로그</a> <a class="link" data-nav="contact" href="/contact/">연락</a></nav> <button class="theme-btn" id="themeToggle" type="button">다크 모드</button> <button class="menu-btn" id="menuToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="메뉴 열기">☰</button> </div> </header> <main class="wrap">  <div class="hero" id="top"> <div class="hero-grid"> <div> <div class="eyebrow">BUNGAE COMPANY · FAST, SOLID &amp; RELIABLE ENGINEERING</div> <h1>번개처럼 빠른 비즈니스 검증,<br>흔들림 없이 단단한 소프트웨어</h1> <p class="lead">번개컴퍼니는 불필요한 기술적 군더더기를 걷어내고, 비즈니스에 꼭 필요한 핵심 제품을 가장 기민하게 구현하는 소프트웨어 테크 기업입니다. 고성능 엣지 인프라와 경량 웹 아키텍처를 기반으로 첫 아이디어의 실현부터 안정적인 프로덕션 운영까지 함께합니다.</p> <div class="cta-row"> <a class="btn" href="/contact/">프로젝트 문의하기</a> <a class="btn ghost" href="/services/">서비스 살펴보기</a> </div> </div> <div class="hero-visual"><img src="/assets/tigo-hero.png" alt="번개컴퍼니 마스코트 티고 — 도약하는 호랑이 캐릭터" width="660" height="660" loading="eager" fetchpriority="high"></div> </div> <div class="corp-band" aria-label="운영 지표"> <div class="fact"><b>99.9%</b><span>가용성 목표의 엣지 운영</span></div> <div class="fact"><b>1분 이내</b><span>무중단 롤백 운영 체계</span></div> <div class="fact"><b>밀리초</b><span>글로벌 엣지 캐시 로딩</span></div> </div> </div> <section class="block" id="about"> <h2>왜 번개컴퍼니인가 (Why Bungae)</h2> <p class="sub">속도와 안정성은 상충되지 않습니다. 더 가볍게 만들고 더 단단하게 운영합니다.</p> <div class="grid"> <div class="card"><h3><span class="num">01 — Agile Execution</span>민첩한 실행력</h3><p>복잡한 서류나 기획 단계에 갇히지 않고, 고객이 직접 사용할 수 있는 실제 작동 제품(MVP)을 최단 기간에 프로덕션으로 선보입니다.</p></div> <div class="card"><h3><span class="num">02 — Solid Architecture</span>견고한 아키텍처</h3><p>서버 비용과 유지보수 부담을 대폭 줄이는 정적 사이트·엣지 컴퓨팅 기반으로 99.9% 가용성과 즉각적인 무중단 1분 롤백을 기본 보장합니다.</p></div> <div class="card"><h3><span class="num">03 — Transparent Verification</span>투명한 기술 검증</h3><p>모든 개발 절차와 성능 지표를 투명한 데이터와 기술 기록으로 검증하며, 고객사의 비즈니스 자산이 지속 가능하게 성장하도록 돕습니다.</p></div> </div> </section> <section class="block" id="services"> <h2>서비스 · 솔루션</h2> <p class="sub">비즈니스의 속도를 만드는 세 가지 방법입니다.</p> <div class="grid"> <a class="card" href="/services/"><h3><span class="num">01 — Web Platform</span>고성능 웹 플랫폼 구축 &amp; 글로벌 엣지 호스팅</h3><p>모던 정적 프레임워크와 글로벌 엣지 CDN을 결합하여 밀리초 단위의 로딩 속도와 완벽한 보안, 제로에 가까운 서버 운영 비용을 실현합니다.</p></a> <a class="card" href="/services/"><h3><span class="num">02 — Automation</span>비즈니스 프로세스 &amp; 정산 자동화 솔루션</h3><p>엑셀 수작업과 반복적인 정산 업무를 직관적인 사내 웹앱과 데이터 파이프라인으로 전산화하여 인적 오류를 없애고 운영 효율을 극대화합니다.</p></a> <a class="card" href="/services/"><h3><span class="num">03 — Knowledge</span>엔지니어링 지식 자산화 &amp; 테크 블로그 구축</h3><p>체계적인 콘텐츠 관리 체계와 전문적인 UI 테마로 기업의 기술력과 비즈니스 히스토리를 대외 신뢰 자산으로 만듭니다.</p></a> </div> <div class="tigo-card"> <img src="/assets/tigo-welcome.png" alt="번개컴퍼니 마스코트 티고 — 환영하는 호랑이 캐릭터" width="360" height="360" loading="lazy"> <div> <p class="tigo-note">Brand Mascot</p><h3>마스코트 티고(Tigo)가 안내합니다</h3> <p>번개 줄무늬와 테크 조끼를 착용한 호랑이 티고는 신속한 기술 실행력과 고객을 향한 친근한 신뢰를 상징합니다. 자세한 회사 이야기는 소개 페이지에서 확인하세요. <a href="/about/">회사 소개 보기 →</a></p> </div> </div> </section> <section class="block" id="blog"> <h2>기술블로그 최신 글</h2> <p class="sub">회사 사이트 하위 항목(/blog/)에서 계속 연재됩니다.</p> <div class="grid"> <a class="card" href="/blog/hello-cloudflare-pages/"> <div class="meta">2026-09-03</div> <h3>Cloudflare Pages에 기술블로그를 올리기까지</h3> <p>Astro 정적 빌드부터 Pages 배포, 공개 URL 검증까지의 실제 절차를 정리했습니다.</p> </a><a class="card" href="/blog/astro-content-collections/"> <div class="meta">2026-09-02</div> <h3>Astro Content Collections로 글 관리하기</h3> <p>Markdown frontmatter를 스키마로 검증하고 글 목록·상세를 자동 생성하는 방법.</p> </a><a class="card" href="/blog/pages-rollback-strategy/"> <div class="meta">2026-09-01</div> <h3>정적 블로그 롤백 전략: Pages Deployments</h3> <p>깨진 배포가 나가도 1분 안에 되돌리는 Pages 히스토리 기반 롤백 절차.</p> </a> </div> <div style="margin-top:16px;"><a href="/blog/">글 전체 보기 →</a></div> </section> <section class="block" id="contact"> <h2>프로젝트 문의</h2> <p class="sub">웹사이트 구축 · 정산 자동화 · 기술 자산화에 대해 1~2일 안에 답드립니다.</p> <div class="cta-row"> <a class="btn" href="/contact/">프로젝트 문의하기</a> <a class="btn ghost" href="/about/">회사 소개 보기</a> </div> </section>  </main> <footer class="site"> <div class="wrap"> <div>번개컴퍼니 · 번개처럼 빠른 비즈니스 검증, 흔들림 없이 단단한 소프트웨어.</div> <div style="margin-top:6px;"> <a href="/blog/">기술블로그</a> · <a href="/about/">회사 소개</a> · <a href="/contact/">연락하기</a> </div> <div style="margin-top:6px;">이전 블로그 주소(/posts/·/about 블로그 안내)는 하위 경로(/blog/)로 이전되었습니다.</div> </div> </footer> <script data-section>
-    (function () {
-      var btn = document.getElementById('themeToggle');
-      function label() {
-        var t = document.documentElement.getAttribute('data-theme');
-        if (btn) btn.textContent = t === 'dark' ? '라이트 모드' : '다크 모드';
-      }
-      if (btn) btn.addEventListener('click', function () {
-        var cur = document.documentElement.getAttribute('data-theme');
-        var next = cur === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        try { localStorage.setItem('bungae-theme', next); } catch (e) {}
-        label();
-      });
-      label();
-      try {
-        var sec = document.currentScript && document.currentScript.getAttribute('data-section');
-        if (sec) {
-          var el = document.querySelector('.nav a[data-nav="' + sec + '"]');
-          if (el) el.classList.add('active');
-        }
-      } catch (e) {}
-    })();
-</script> <script>(function(){var t=document.getElementById("menuToggle"),n=document.getElementById("primaryNav");if(t&&n){t.addEventListener("click",function(){var o=n.classList.toggle("open");t.setAttribute("aria-expanded",o?"true":"false");t.setAttribute("aria-label",o?"메뉴 닫기":"메뉴 열기");});}})();</script></body> </html>
-<!-- pages-git-verify: GitHub App install check, no visible change -->
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>번개컴퍼니 — 빠른 검증, 단단한 소프트웨어</title>
+<meta name="description" content="번개컴퍼니 — 불필요한 군더더기를 걷어내고 핵심 제품을 가장 기민하게 구현하는 소프트웨어 테크 기업">
+<link rel="icon" href="data:,">
+<meta property="og:image" content="/assets/tigo-hero-studio.jpg">
+<script>
+(function () {
+  try {
+    var saved = null; try { saved = localStorage.getItem('bungae-theme'); } catch (e2) {}
+    var theme = saved || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+</script>
+<style>
+:root{
+  --paper:#F6F7F9; --ink:#16212F; --muted:#5A6C80; --card:#FFFFFF; --line:#DFE5EC;
+  --accent:#16365C; --accent-ink:#FFFFFF; --accent-soft:#E8EEF5; --eyebrow:#3D5A7A;
+  --navy:#12283F; --pill-shadow:0 10px 24px rgba(22,54,92,.16);
+  --dark-paper:#0F151E; --dark-ink:#D6DDE6; --dark-muted:#97A6B9; --dark-card:#18222F;
+  --dark-line:#2B3A4E; --dark-accent:#8FB0D1;
+}
+html[data-theme=dark]{--paper:var(--dark-paper);--ink:var(--dark-ink);--muted:var(--dark-muted);--card:var(--dark-card);--line:var(--dark-line);--accent:var(--dark-accent);--accent-ink:#0F151E;--accent-soft:#1D2B3E;--eyebrow:var(--dark-accent)}
+*,*:before,*:after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.7;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;height:auto}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+/* announcement bar */
+.announce{background:var(--accent);color:var(--accent-ink);font-size:13.5px;text-align:center;padding:9px 16px;letter-spacing:-.01em}
+.announce b{font-weight:700}
+.announce a{color:inherit;text-decoration:underline;text-underline-offset:3px;font-weight:600}
+/* header */
+header.site{border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;gap:8px;min-height:68px}
+.brand{font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none;margin-right:auto;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:9px}
+.brand-mark{display:inline-flex;width:26px;height:26px;border-radius:7px;background:var(--accent);color:var(--accent-ink);align-items:center;justify-content:center;font-size:13px;line-height:1}
+.brand-mark svg{display:block}
+.menu-btn{display:none;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 12px;font-size:15px;cursor:pointer;line-height:1;flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav a.link{text-decoration:none;padding:8px 13px;border-radius:999px;font-size:15px;font-weight:500;color:var(--muted);white-space:nowrap;flex-shrink:0}
+.nav a.link:hover{color:var(--ink);background:var(--accent-soft)}
+.nav a.link.active{color:var(--ink);background:var(--accent-soft)}
+.theme-btn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 13px;font-size:13.5px;cursor:pointer;white-space:nowrap;flex-shrink:0}
+.nav-cta{text-decoration:none;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:14.5px;padding:10px 20px;border-radius:999px;white-space:nowrap;flex-shrink:0;box-shadow:var(--pill-shadow)}
+.nav-cta:hover{filter:brightness(1.08)}
+/* hero */
+.hero-stripe{background:var(--card);border-bottom:1px solid var(--line);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:44px;align-items:center;padding:64px 0 56px}
+.eyebrow{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.14em;color:var(--eyebrow);background:var(--accent-soft);border:1px solid var(--line);border-radius:999px;padding:7px 15px;margin:0 0 18px}
+.hero-grid h1{font-size:44px;line-height:1.22;letter-spacing:-.03em;margin:0 0 16px}
+.lead{color:var(--muted);font-size:17px;margin:0 0 26px;max-width:34em}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.btn{display:inline-block;text-decoration:none;background:var(--accent);color:var(--accent-ink);font-weight:700;padding:13px 28px;border-radius:999px;box-shadow:var(--pill-shadow)}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent);filter:none}
+html[data-theme=dark] .btn.ghost:hover{color:var(--accent)}
+.checkline{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--muted);margin:0;padding:0;list-style:none}
+.checkline li{display:flex;align-items:center;gap:7px}
+.checkline svg{flex-shrink:0;color:var(--eyebrow)}
+.hero-visual{position:relative;margin:0}
+.hero-frame{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:26px;text-align:center;position:relative}
+.hero-frame img{width:100%;max-width:330px;border-radius:14px}
+.chip{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 28px rgba(18,40,63,.14);padding:10px 15px;font-size:13px;text-align:left}
+.chip b{display:block;font-size:14.5px;letter-spacing:-.01em}
+.chip span{color:var(--muted);font-size:12.5px}
+.chip.c1{top:22px;left:-14px}
+.chip.c2{bottom:24px;right:-10px}
+/* stack strip */
+.stack-strip{border-bottom:1px solid var(--line);background:var(--paper)}
+.stack-row{display:flex;align-items:center;gap:10px 26px;flex-wrap:wrap;justify-content:center;padding:20px 0;font-size:14px;color:var(--muted)}
+.stack-row b{font-size:12px;letter-spacing:.16em;color:var(--eyebrow);font-weight:800}
+.stack-row span{white-space:nowrap;font-weight:600}
+/* sections */
+section.block{padding:72px 0}
+section.band{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 40px}
+.sec-head .kick{font-size:12.5px;font-weight:800;letter-spacing:.18em;color:var(--eyebrow);margin:0 0 10px}
+.sec-head h2{font-size:32px;letter-spacing:-.025em;margin:0 0 12px;line-height:1.35}
+.sec-head p{color:var(--muted);margin:0}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 26px;box-shadow:0 4px 18px rgba(18,40,63,.06)}
+.card .num{display:block;font-size:12.5px;font-weight:800;letter-spacing:.12em;color:var(--eyebrow);margin-bottom:10px}
+.card h3{font-size:19px;margin:0 0 10px;letter-spacing:-.02em}
+.card p{color:var(--muted);font-size:15px;margin:0 0 16px}
+.card a.more{font-weight:700;font-size:14.5px;text-decoration:none;color:var(--accent)}
+html[data-theme=dark] .card a.more{color:var(--accent)}
+.card a.more:hover{text-decoration:underline;text-underline-offset:3px}
+/* stats band */
+.stats-band{background:var(--navy);color:#fff}
+html[data-theme=dark] .stats-band{background:#0B1220}
+.stats-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding:54px 0;text-align:center}
+.stats-grid b{display:block;font-size:38px;letter-spacing:-.03em;line-height:1.2}
+.stats-grid span{opacity:.78;font-size:14.5px}
+/* why */
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.why-item{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 26px}
+.why-ico{width:46px;height:46px;border-radius:14px;background:var(--accent-soft);color:var(--eyebrow);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.why-item h3{font-size:18px;margin:0 0 8px;letter-spacing:-.02em}
+.why-item p{color:var(--muted);font-size:15px;margin:0}
+/* mascot */
+.mascot-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:36px;align-items:center}
+.mascot-frame{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px;text-align:center}
+.mascot-frame img{max-width:230px;border-radius:14px}
+.mascot-label{font-size:11.5px;font-weight:800;letter-spacing:.2em;color:var(--eyebrow);margin:12px 0 0}
+.mascot-copy h2{font-size:28px;letter-spacing:-.025em;margin:0 0 12px}
+.mascot-copy p{color:var(--muted);margin:0 0 20px}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:step}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 22px;position:relative}
+.step b.step-no{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);align-items:center;justify-content:center;font-size:15px;margin-bottom:14px}
+.step h3{font-size:16.5px;margin:0 0 8px}
+.step p{color:var(--muted);font-size:14px;margin:0}
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:12px}
+.faq summary{font-weight:700;cursor:pointer;font-size:16px}
+.faq details p{color:var(--muted);font-size:15px;margin:10px 0 0}
+/* blog */
+.post-card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none}
+.post-top{background:var(--accent-soft);padding:26px 24px 22px;border-bottom:1px solid var(--line)}
+.post-top time{font-size:13px;color:var(--eyebrow);font-weight:700}
+.post-top h3{font-size:18px;margin:8px 0 0;letter-spacing:-.02em;line-height:1.5}
+.post-body{padding:20px 24px 24px;color:var(--muted);font-size:14.5px;flex:1}
+.post-link{padding:0 24px 24px;font-weight:700;font-size:14.5px;color:var(--accent)}
+html[data-theme=dark] .post-link{color:var(--accent)}
+.center{text-align:center;margin-top:34px}
+/* cta band */
+.cta-band{background:var(--navy);color:#fff;border-radius:0}
+html[data-theme=dark] .cta-band{background:#0B1220}
+.cta-inner{text-align:center;padding:76px 0}
+.cta-inner h2{font-size:34px;letter-spacing:-.025em;margin:0 0 12px}
+.cta-inner p{opacity:.8;margin:0 0 28px}
+.cta-inner .cta-row{justify-content:center;margin-bottom:0}
+.btn.light{background:#fff;color:var(--navy);box-shadow:none}
+.btn.outline-w{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5);box-shadow:none}
+/* footer */
+footer.site{background:var(--card);border-top:1px solid var(--line);margin-top:0}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:28px;padding:52px 0 34px}
+.foot-grid h4{font-size:13px;letter-spacing:.1em;color:var(--muted);margin:0 0 14px;font-weight:800}
+.foot-grid ul{list-style:none;margin:0;padding:0}
+.foot-grid li{margin-bottom:9px}
+.foot-grid a{text-decoration:none;color:var(--muted);font-size:14.5px}
+.foot-grid a:hover{color:var(--ink)}
+.foot-brand p{color:var(--muted);font-size:14px;margin:12px 0 0;max-width:26em}
+.foot-bottom{border-top:1px solid var(--line);padding:18px 0 26px;color:var(--muted);font-size:13.5px;display:flex;gap:8px 20px;flex-wrap:wrap;justify-content:space-between}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:minmax(0,1fr);padding:48px 0;gap:32px}
+  .hero-grid h1{font-size:34px}
+  .grid3,.why-grid{grid-template-columns:minmax(0,1fr)}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mascot-grid{grid-template-columns:minmax(0,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .chip.c1{left:6px}.chip.c2{right:6px}
+}
+@media (max-width:720px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--card);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:10px 16px 14px;gap:2px;z-index:20}
+  header.site{position:sticky}
+  header.site .nav{position:relative}
+  .nav-links.open{display:flex}
+  .nav a.link{padding:11px 12px}
+  .menu-btn{display:inline-block}
+  .nav-cta{display:none}
+  .stats-grid{grid-template-columns:minmax(0,1fr);gap:26px;padding:44px 0}
+  section.block{padding:56px 0}
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .foot-grid{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<div class="announce"><b>신규 프로젝트 상담 진행 중</b> — 웹사이트 구축 · 정산 자동화 · 기술 자산화, 평균 1~2일 안에 답드립니다. <a href="/contact/">문의하기</a></div>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="/"><span class="brand-mark"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>번개컴퍼니</a>
+    <nav class="nav-links" id="primaryNav" aria-label="주요 메뉴">
+      <a class="link" data-nav="services" href="/services/">서비스</a>
+      <a class="link" data-nav="about" href="/about/">소개</a>
+      <a class="link" data-nav="blog" href="/blog/">기술블로그</a>
+      <a class="link" data-nav="contact" href="/contact/">연락</a>
+    </nav>
+    <button class="theme-btn" id="themeToggle" type="button">다크 모드</button>
+    <a class="nav-cta" href="/contact/">프로젝트 문의하기</a>
+    <button class="menu-btn" id="menuToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="메뉴 열기">☰</button>
+  </div>
+</header>
+
+<main>
+  <div class="hero-stripe">
+    <div class="wrap hero-grid" id="top">
+      <div>
+        <p class="eyebrow">BUNGAE COMPANY · FAST, SOLID &amp; RELIABLE ENGINEERING</p>
+        <h1>번개처럼 빠르게,<br>흔들림 없이 단단하게</h1>
+        <p class="lead">번개컴퍼니는 불필요한 기술적 군더더기를 걷어내고, 비즈니스에 꼭 필요한 핵심 제품을 가장 기민하게 구현하는 소프트웨어 테크 기업입니다. 첫 아이디어의 실현부터 안정적인 운영까지 함께합니다.</p>
+        <div class="cta-row">
+          <a class="btn" href="/contact/">프로젝트 문의하기</a>
+          <a class="btn ghost" href="/services/">서비스 살펴보기</a>
+        </div>
+        <ul class="checkline">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>99.9% 가용성 목표의 엣지 운영</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>1분 이내 무중단 롤백 체계</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>밀리초 단위 글로벌 로딩</li>
+        </ul>
+      </div>
+      <figure class="hero-visual">
+        <div class="hero-frame">
+          <img src="/assets/tigo-hero.png" alt="번개컴퍼니 마스코트 티고 — 도약하는 호랑이 캐릭터" width="660" height="660" loading="eager" fetchpriority="high">
+          <div class="chip c1"><b>무중단 운영</b><span>배포 스냅샷 · 빠른 복구</span></div>
+          <div class="chip c2"><b>엣지 호스팅</b><span>전 세계 캐시 · 자동 보안</span></div>
+        </div>
+      </figure>
+    </div>
+  </div>
+
+  <div class="stack-strip">
+    <div class="wrap stack-row" aria-label="주요 기술 스택">
+      <b>OUR STACK</b>
+      <span>Astro 정적 빌드</span><span>·</span>
+      <span>Cloudflare Pages</span><span>·</span>
+      <span>글로벌 엣지 CDN</span><span>·</span>
+      <span>Markdown 출판</span>
+    </div>
+  </div>
+
+  <section class="block" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kick">SERVICES</p>
+        <h2>비즈니스의 속도를 만드는<br>세 가지 방법</h2>
+        <p>과장 없이, 검증된 방식으로 제공합니다.</p>
+      </div>
+      <div class="grid3">
+        <div class="card">
+          <span class="num">01 — WEB PLATFORM</span>
+          <h3>고성능 웹 플랫폼 구축</h3>
+          <p>모던 정적 프레임워크와 글로벌 엣지 CDN으로 밀리초 단위 로딩, 자동 보안, 낮은 운영 비용을 실현합니다.</p>
+          <a class="more" href="/services/">자세히 보기 →</a>
+        </div>
+        <div class="card">
+          <span class="num">02 — AUTOMATION</span>
+          <h3>정산 · 업무 자동화</h3>
+          <p>엑셀 수작업과 반복 정산 업무를 사내 웹앱과 데이터 흐름으로 정리해 오류를 줄이고 효율을 높입니다.</p>
+          <a class="more" href="/services/">자세히 보기 →</a>
+        </div>
+        <div class="card">
+          <span class="num">03 — KNOWLEDGE</span>
+          <h3>지식 자산화 · 블로그 구축</h3>
+          <p>체계적인 콘텐츠 관리와 읽기 편한 테마로 기업의 기술 기록을 대외 신뢰 자산으로 만듭니다.</p>
+          <a class="more" href="/services/">자세히 보기 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-band">
+    <div class="wrap stats-grid" aria-label="운영 지표">
+      <div><b>99.9%</b><span>가용성 목표의 엣지 운영</span></div>
+      <div><b>1분 이내</b><span>무중단 롤백 운영 체계</span></div>
+      <div><b>밀리초</b><span>글로벌 엣지 캐시 로딩</span></div>
+    </div>
+  </div>
+
+  <section class="block" id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kick">WHY BUNGAE</p>
+        <h2>가볍게 만들고,<br>단단하게 운영합니다</h2>
+        <p>속도와 안정성은 상충되지 않습니다.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+          <h3>민첩한 실행력</h3>
+          <p>서류와 기획에 갇히지 않고, 실제로 동작하는 제품(MVP)을 최단 기간에 운영 환경에 올립니다.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>견고한 아키텍처</h3>
+          <p>정적 사이트와 엣지 컴퓨팅 기반으로 99.9% 가용성과 1분 이내 롤백을 기본으로 보장합니다.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5z"/></svg></div>
+          <h3>투명한 기술 검증</h3>
+          <p>개발 절차와 성능 지표를 기록으로 검증하며, 고객의 자산이 지속 성장하도록 돕습니다.</p>
+        </div>
+      </div>
+      <div class="center"><a class="btn ghost" href="/about/">회사 소개 보기</a></div>
+    </div>
+  </section>
+
+  <section class="block band" id="mascot">
+    <div class="wrap mascot-grid">
+      <div class="mascot-frame">
+        <img src="/assets/tigo-welcome.png" alt="번개컴퍼니 마스코트 티고 — 환영 포즈의 호랑이 캐릭터" width="660" height="660" loading="lazy">
+        <p class="mascot-label">BRAND MASCOT</p>
+      </div>
+      <div class="mascot-copy">
+        <p class="kick" style="font-size:12.5px;font-weight:800;letter-spacing:.18em;color:var(--eyebrow);margin:0 0 10px">MEET TIGO</p>
+        <h2>마스코트 티고(Tigo)가 안내합니다</h2>
+        <p>번개 줄무늬와 테크 조끼를 착용한 호랑이 티고는 신속한 실행력과 고객을 향한 친근한 신뢰를 상징합니다. 자세한 회사 이야기는 소개 페이지에서 확인하세요.</p>
+        <div class="cta-row"><a class="btn ghost" href="/about/">회사 이야기 보기 →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kick">HOW IT WORKS</p>
+        <h2>상담부터 운영까지, 네 단계</h2>
+        <p>처음 문의부터 실제 운영까지 흐름이 단순합니다.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><b class="step-no">1</b><h3>상담</h3><p>목표 · 기한 · 참고 화면을 알려주세요. 1~2일 안에 답드립니다.</p></div>
+        <div class="step"><b class="step-no">2</b><h3>제안</h3><p>범위와 일정을 과장 없이 정리해 검증 계획과 함께 제안합니다.</p></div>
+        <div class="step"><b class="step-no">3</b><h3>구축</h3><p>동작하는 제품부터 먼저 선보이고, 피드백을 반영해 다듬습니다.</p></div>
+        <div class="step"><b class="step-no">4</b><h3>운영</h3><p>엣지에 배포하고 스냅샷으로 관리해 장애 시 1분 안에 되돌립니다.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block band" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kick">FAQ</p>
+        <h2>자주 묻는 질문</h2>
+        <p>문의 전에 확인하시면 더 빨리 진행됩니다.</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>블로그 주소가 바뀌었나요?</summary>
+          <p>네. 기존 /posts/… 글은 /blog/… 로 자동 연결됩니다. 북마크는 그대로 두셔도 됩니다.</p>
+        </details>
+        <details>
+          <summary>의뢰할 때 무엇을 적어주면 좋나요?</summary>
+          <p>목표, 기한, 현재 주소(URL), 참고 화면이면 충분합니다. 정해지지 않은 부분은 상담에서 함께 정리합니다.</p>
+        </details>
+        <details>
+          <summary>기존 사이트 이전이나 개편도 가능한가요?</summary>
+          <p>가능합니다. 현재 사이트 구조와 콘텐츠를 진단한 뒤, 엣지 호스팅과 읽기 편한 테마로 옮겨드립니다.</p>
+        </details>
+        <details>
+          <summary>답변은 얼마나 걸리나요?</summary>
+          <p>평균 1~2일 안에 답드립니다. 연락 페이지의 대표 주소나 기술블로그 댓글 경로로 편하게 남겨주세요.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="blog">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kick">TECH BLOG</p>
+        <h2>기술블로그 최신 글</h2>
+        <p>회사 사이트 하위 항목(/blog/)에서 계속 연재됩니다.</p>
+      </div>
+      <div class="grid3">
+        <a class="post-card" href="/blog/hello-cloudflare-pages/">
+          <div class="post-top"><time>2026-09-03</time><h3>Cloudflare Pages에 기술블로그를 올리기까지</h3></div>
+          <p class="post-body">정적 빌드부터 Pages 배포, 공개 URL 검증까지의 실제 절차를 정리했습니다.</p>
+          <span class="post-link">글 읽기 →</span>
+        </a>
+        <a class="post-card" href="/blog/astro-content-collections/">
+          <div class="post-top"><time>2026-09-02</time><h3>Content Collections로 글 관리하기</h3></div>
+          <p class="post-body">Markdown 앞머리 정보를 구조로 검증하고 글 목록과 상세를 자동 생성하는 방법.</p>
+          <span class="post-link">글 읽기 →</span>
+        </a>
+        <a class="post-card" href="/blog/pages-rollback-strategy/">
+          <div class="post-top"><time>2026-09-01</time><h3>정적 블로그 롤백 전략: Pages Deployments</h3></div>
+          <p class="post-body">깨진 배포가 나가도 1분 안에 되돌리는 Pages 기록 기반 롤백 절차.</p>
+          <span class="post-link">글 읽기 →</span>
+        </a>
+      </div>
+      <div class="center"><a class="btn ghost" href="/blog/">글 전체 보기</a></div>
+    </div>
+  </section>
+
+  <div class="cta-band" id="contact">
+    <div class="wrap cta-inner">
+      <h2>프로젝트를 시작해볼까요?</h2>
+      <p>웹사이트 구축 · 정산 자동화 · 기술 자산화에 대해 1~2일 안에 답드립니다.</p>
+      <div class="cta-row">
+        <a class="btn light" href="/contact/">프로젝트 문의하기</a>
+        <a class="btn outline-w" href="/about/">회사 소개 보기</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="/"><span class="brand-mark"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>번개컴퍼니</a>
+      <p>번개처럼 빠른 비즈니스 검증, 흔들림 없이 단단한 소프트웨어.</p>
+    </div>
+    <div>
+      <h4>바로가기</h4>
+      <ul>
+        <li><a href="/services/">서비스</a></li>
+        <li><a href="/about/">회사 소개</a></li>
+        <li><a href="/contact/">연락하기</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>기술블로그</h4>
+      <ul>
+        <li><a href="/blog/">글 전체 보기</a></li>
+        <li><a href="/blog/hello-cloudflare-pages/">Pages 배포 기록</a></li>
+        <li><a href="/blog/pages-rollback-strategy/">롤백 전략</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>연락</h4>
+      <ul>
+        <li><a href="/contact/">프로젝트 문의</a></li>
+        <li><a href="/contact/">대표 주소 안내</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>번개컴퍼니 · 빠르게 검증하고, 단단하게 만듭니다.</span>
+    <span>이전 블로그 주소(/posts/)는 하위 경로(/blog/)로 자동 연결됩니다.</span>
+  </div>
+</footer>
+<script data-section>
+(function () {
+  var btn = document.getElementById('themeToggle');
+  function label() {
+    var t = document.documentElement.getAttribute('data-theme');
+    if (btn) btn.textContent = t === 'dark' ? '라이트 모드' : '다크 모드';
+  }
+  if (btn) btn.addEventListener('click', function () {
+    var cur = document.documentElement.getAttribute('data-theme');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('bungae-theme', next); } catch (e) {}
+    label();
+  });
+  label();
+})();
+</script>
+<script>(function(){var t=document.getElementById("menuToggle"),n=document.getElementById("primaryNav");if(t&&n){t.addEventListener("click",function(){var o=n.classList.toggle("open");t.setAttribute("aria-expanded",o?"true":"false");t.setAttribute("aria-label",o?"메뉴 닫기":"메뉴 열기");});}})();</script>
+</body>
+</html>
