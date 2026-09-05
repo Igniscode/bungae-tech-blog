@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 48" role="img" aria-label="번개컴퍼니 로고">
+  <title>번개컴퍼니</title>
+  <rect x="2" y="4" width="40" height="40" rx="10" fill="#16365C"/>
+  <path d="M25.5 8 13 26.2h7.2L19 38l12.5-18.4h-7.3L25.5 8z" fill="#FFFFFF"/>
+  <path d="M19.2 26.2h-3.4l3.1-4.2h3.4l-3.1 4.2z" fill="#FFC53D" opacity="0.95"/>
+  <text x="50" y="26" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif" font-size="19" font-weight="800" letter-spacing="-0.02em" fill="#16212F">번개컴퍼니</text>
+  <text x="51" y="39" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="8" font-weight="700" letter-spacing="0.22em" fill="#5A6C80">BUNGAE COMPANY</text>
+</svg>
