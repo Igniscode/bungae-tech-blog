@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="ko" data-theme="light"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Playwright 테스트로 Cloudflare Pages 배포 검증 자동화 | 번개컴퍼니</title><meta name="description" content="Playwright 테스트와 GitHub Actions를 연동하여 Cloudflare Pages 배포 후 2분 이내 검증 스크립트를 실행하는 실제 절차를 정리했습니다."><link rel="icon" type="image/svg+xml" href="/assets/bungae-mark.svg"><script>
+    (function () {
+      try {
+        var saved = null; try { saved = localStorage.getItem('bungae-theme'); } catch (e2) {}
+        var theme = saved || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+</script><style>:root{--paper:#F6F7F9;--ink:#16212F;--muted:#5A6C80;--card:#FFFFFF;--line:#DFE5EC;--accent:#16365C;--accent-ink:#FFFFFF;--accent-soft:#E8EEF5;--eyebrow:#3D5A7A;--dark-paper:#0F151E;--dark-ink:#D6DDE6;--dark-muted:#97A6B9;--dark-card:#18222F;--dark-line:#2B3A4E;--dark-accent:#8FB0D1}html[data-theme=dark]{--paper:var(--dark-paper);--ink:var(--dark-ink);--muted:var(--dark-muted);--card:var(--dark-card);--line:var(--dark-line);--accent:var(--dark-accent);--accent-soft:#1D2B3E;--eyebrow:var(--dark-accent)}*,*:before,*:after{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.7;font-family:-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Noto Sans KR,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit}.wrap{max-width:1080px;margin:0 auto;padding:0 24px}.prose{max-width:720px}header.site{border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:10}.nav{display:flex;align-items:center;gap:4px;min-height:64px}.brand{font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none;margin-right:auto;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:9px}.brand-mark{display:inline-flex;width:26px;height:26px;border-radius:7px;background:var(--accent);color:var(--accent-ink);align-items:center;justify-content:center;font-size:13px;line-height:1}.brand-mark svg{display:block}.brand-logo{height:30px;width:auto;display:block;flex-shrink:0}.brand-logo.logo-dark{display:none}html[data-theme=dark] .brand-logo.logo-light{display:none}html[data-theme=dark] .brand-logo.logo-dark{display:block}@media(max-width:720px){.brand-logo{height:28px}}.menu-btn{display:none;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px 10px;font-size:16px;cursor:pointer;line-height:1;flex-shrink:0}.nav-links{display:flex;align-items:center;gap:2px}.nav a.link{text-decoration:none;padding:8px 13px;border-radius:8px;font-size:15px;font-weight:500;color:var(--muted);white-space:nowrap;flex-shrink:0}.nav a.link:hover{color:var(--ink);background:var(--accent-soft)}.nav a.link.active{color:var(--ink);background:var(--accent-soft)}.theme-btn{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:8px;padding:7px 13px;font-size:13px;font-weight:600;cursor:pointer;margin-left:8px;white-space:nowrap;flex-shrink:0}.theme-btn:hover{color:var(--ink);border-color:var(--muted)}.hero{padding:64px 0 48px}.eyebrow{color:var(--eyebrow);font-weight:700;letter-spacing:.14em;font-size:12px;text-transform:uppercase}.eyebrow:after{content:"";display:block;width:36px;height:2px;background:var(--accent);margin-top:10px;opacity:.55}.hero h1{font-size:clamp(28px,4vw,40px);line-height:1.32;letter-spacing:-.025em;margin:14px 0 14px;font-weight:800}.hero p.lead{font-size:17px;line-height:1.75;color:var(--muted);max-width:620px;margin:0}.cta-row{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}.btn{display:inline-block;text-decoration:none;border-radius:8px;padding:12px 22px;font-weight:700;font-size:15px;background:var(--accent);color:var(--accent-ink);border:1px solid var(--accent)}.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}.btn.ghost:hover{border-color:var(--muted)}section.block{padding:36px 0}section.block h2{font-size:22px;letter-spacing:-.02em;margin:0 0 6px;font-weight:800}section.block .sub{color:var(--muted);margin:0 0 20px;font-size:15px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px;text-decoration:none}.card h3{margin:0 0 8px;font-size:17px;letter-spacing:-.01em;line-height:1.5}.card h3 .num{display:block;font-size:11.5px;font-weight:700;letter-spacing:.12em;color:var(--eyebrow);margin-bottom:6px}.card p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.7}.card .meta{font-size:13px;color:var(--muted);margin-bottom:6px}.tag{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:1px 10px;margin:2px 4px 2px 0;color:var(--muted)}footer.site{border-top:1px solid var(--line);margin-top:48px;padding:28px 0 40px;color:var(--muted);font-size:13.5px;background:var(--card)}footer.site a{color:inherit}.crumb{font-size:13.5px;color:var(--muted);margin:24px 0 0}.crumb a{color:inherit}article.post h1{font-size:28px;line-height:1.45;letter-spacing:-.02em}article.post pre{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;overflow-x:auto;font-size:14px;line-height:1.7}article.post code{font-size:.9em}@media(max-width:640px){.nav{flex-wrap:wrap;padding-top:8px;padding-bottom:8px;row-gap:4px}.brand{font-size:17px;margin-right:0}.theme-btn{order:2;margin-left:auto}.menu-btn{display:block;order:3;margin-left:8px}.nav-links{order:4;flex-basis:100%;display:none;flex-direction:column;align-items:stretch;gap:2px;padding:4px 0 2px}.nav-links.open{display:flex}.nav a.link{display:block;padding:10px 12px;font-size:15px}.hero{padding:44px 0 32px}.hero-grid{grid-template-columns:1fr}.hero-visual{order:-1;padding:20px}.hero-visual img{max-width:180px}.corp-band{grid-template-columns:1fr}.tigo-card{grid-template-columns:1fr;text-align:center}.tigo-card img{margin:0 auto}.page-hero{grid-template-columns:1fr}.page-hero img{max-width:170px;margin:0 auto}</style></head> <body> <header class="site"> <div class="wrap nav"> <a class="brand" href="/"><img class="brand-logo logo-light" src="/assets/bungae-logo.svg" alt="번개컴퍼니" width="155" height="30"><img class="brand-logo logo-dark" src="/assets/bungae-logo-dark.svg" alt="번개컴퍼니" width="155" height="30"></a> <nav class="nav-links" id="primaryNav" aria-label="주요 메뉴"><a class="link" data-nav="services" href="/services/">서비스</a> <a class="link" data-nav="about" href="/about/">소개</a> <a class="link" data-nav="blog" href="/blog/">기술블로그</a> <a class="link" data-nav="contact" href="/contact/">연락</a></nav> <button class="theme-btn" id="themeToggle" type="button">다크 모드</button> <button class="menu-btn" id="menuToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="메뉴 열기">☰</button> </div> </header> <main class="wrap">  <p class="crumb"><a href="/">홈</a> / <a href="/blog/">기술블로그</a> / 글</p> <article class="post prose"> <div class="meta" style="color:var(--muted);font-size:14px;">2026-09-03</div> <h1>Playwright 테스트로 Cloudflare Pages 배포 검증 자동화</h1> <p style="color:var(--muted);">Playwright 테스트와 GitHub Actions를 연동하여 Cloudflare Pages 배포 후 2분 이내 검증 스크립트를 실행하는 실제 절차를 정리했습니다.</p> <div><span class="tag">#cloudflare-pages</span><span class="tag">#astro</span><span class="tag">#hosting</span></div> <hr style="border:none;border-top:1px solid var(--line);margin:20px 0;"> <h2 id="목적">목적</h2>
+<p>클라우드플레어 페이지에 새로운 배포가 이루어진 후, 사용자 여정에 치명적인 버그가 포함되지 않았는지 빠르게 확인하기 위함입니다. 수동 테스트는 시간이 오래 걸리며, CI/CD 파이프라인에 자동화된 검증을 추가하면 신뢰성을 높일 수 있습니다.</p>
+<h2 id="플레이워이트-스크립트">Playwright 스크립트</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>const { test, expect } = require(\'@playwright/test\');</span></span>
+<span class="line"></span>
+<span class="line"><span>// 배포된 URL 테스트 (배포 후 동적 할당된 URL 대체)</span></span>
+<span class="line"><span>const BASE_URL = \'https://deploy-preview-xxx.pages.dev\';</span></span>
+<span class="line"></span>
+<span class="line"><span>test\'배포 검증: 페이지 로드 및 핵심 요소 확인\', async ({ page }) => {</span></span>
+<span class="line">    <span>    await page.goto(BASE_URL);</span></span>
+<span class="line">    <span>    await expect(page).toHaveTitle(/번개컴퍼니/);</span></span>
+<span class="line">    <span>    await expect(page.locator(\'h1\')).toBeVisible();</span></span>
+<span class="line">    <span>    await expect(page.locator(\.nav)).toBeVisible();</span></span>
+<span class="line">});</span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span>test\'네비게이션 메뉴 상호작용 검증\', async ({ page }) => {</span></span>
+<span class="line">    <span>    await page.goto(BASE_URL);</span></span>
+<span class="line">    <span>    await page.click(\.nav a[data-nav=\"blog\"]);</span></span>
+<span class="line">    <span>    await expect(page.locator(\.post\)).toHaveCount(5);</span></span>
+<span class="line">});</span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span>test\'테마 토글 기능 검증\', async ({ page }) => {</span></span>
+<span class="line">    <span>    await page.goto(BASE_URL);</span></span>
+<span class="line">    <span>    await page.click(#themeToggle);</span></span>
+<span class="line">    <span>    await expect(page).toHaveAttribute(\'data-theme\', \'dark\');</span></span>
+<span class="line">});</span></code></pre>
+<h2 id="github-actions-연동">GitHub Actions 연동</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>name: Cloudflare Pages Deploy Verification</span></span>
+<span class="line"></span>
+<span class="line"><span>on:</span></span>
+<span class="line">    <span>push:</span></span>
+<span class="line">        branches: [dev, main]</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span>jobs:</span></span>
+<span class="line">    deploy:</span></span>
+<span class="line">        runs-on: ubuntu-latest</span></span>
+<span class="line">        steps:</span></span>
+<span class="line">        - uses: actions/checkout@v3</span></span>
+<span class="line">        - name: Build</span></span>
+<span class="line">          run: npm run build</span></span>
+<span class="line">        - name: Deploy to Cloudflare Pages</span></span>
+<span class="line">          run: npx wrangler pages deploy dist --project-name=bungae-tech-blog</span></span>
+<span class="line">        - name: Wait for deployment</span></span>
+<span class="line">          run: |</span></span>
+<span class="line">            <span>|</span></span>
+<span class="line">            <span>|   DEPLOYMENT_URL=$(npx wrangler pages deployment list --project-name=bungae-tech-blog --json | jq -r \'.[0].url\')</span></span>
+<span class="line">            <span>|   echo "DEPLOYMENT_URL=$DEPLOYMENT_URL" >> $GITHUB_ENV</span></span>
+<span class="line">          </span></span>
+<span class="line">        - name: Run Playwright verification</span></span>
+<span class="line">          run: npx playwright test</span></span>
+<span class="line">          env:</span></span>
+<span class="line">            BUNGAE_TEST_EMAIL: ${{ secrets.BUNGAE_TEST_EMAIL }}</span></span>
+<span class="line">            BUNGAE_TEST_PASSWORD: ${{ secrets.BUNGAE_TEST_PASSWORD }}</span></span>
+<span class="line"></code></pre>
+<h2 id="검증-체크리스트">검증 체크리스트</h2>
+<ol>
+<li><code>https://deploy-preview-xxx.pages.dev</code> 접속 시 200 응답</li>
+<li>헤더가 <strong>번개컴퍼니</strong>로 표시되는지 확인</li>
+<li>네비게이션 메뉴가 노출되는지 확인</li>
+<li>콘솔 에러가 발생하지 않는지 확인</li>
+<li>스크린샷이 에러 없이 저장되는지 확인</li>
+</ol>
+<blockquote>
+<p>다음 단계는 <code>blog.bungae.site</code> 커스텀 도메인 연결입니다. 이번 배포에서는 범위 제외입니다.</p>
+</blockquote> <hr style="border:none;border-top:1px solid var(--line);margin:20px 0;"> <p><a href="/blog/">← 글 목록으로</a></p> </article>  </main> <footer class="site"> <div class="wrap"> <div>번개컴퍼니 · 빠르게 검증하고, 단단하게 만듭니다.</div> <div style="margin-top:6px;"> <a href="/blog/">기술블로그</a> · <a href="/about/">회사 소개</a> · <a href="/contact/">연락하기</a> </div> <div style="margin-top:6px;">이전 블로그 주소(/posts/·/about 블로그 안내)는 하위 경로(/blog/)로 이전되었습니다.</div> </div> </footer> <script data-section="blog">
+    (function () {
+      var btn = document.getElementById('themeToggle');
+      function label() {
+        var t = document.documentElement.getAttribute('data-theme');
+        if (btn) btn.textContent = t === 'dark' ? '라이트 모드' : '다크 모드';
+      }
+      if (btn) btn.addEventListener('click', function () {
+        var cur = document.documentElement.getAttribute('data-theme');
+        var next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('bungae-theme', next); } catch (e) {}
+        label();
+      });
+      label();
+      try {
+        var sec = document.currentScript && document.currentScript.getAttribute('data-section');
+        if (sec) {
+          var el = document.querySelector('.nav a[data-nav="' + sec + '"]');
+          if (el) el.classList.add('active');
+        }
+      } catch (e) {}
+    })();
+</script> <script>(function(){var t=document.getElementById("menuToggle"),n=document.getElementById("primaryNav");if(t&&n){t.addEventListener("click",function(){var o=n.classList.toggle("open");t.setAttribute("aria-expanded",o?"true":"false");t.setAttribute("aria-label",o?"메뉴 닫기":"메뉴 열기");});}})();</script></body> </html>
