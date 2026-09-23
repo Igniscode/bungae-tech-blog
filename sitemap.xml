@@ -18,7 +18,67 @@
   </url>
   <url>
     <loc>https://home.bungae.site/blog/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/sitemap-render-gap-2026-09-23/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/two-week-ops-review-2026-09-22/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/audit-trail-evidence-2026-09-21/</loc>
+    <lastmod>2026-09-21</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/reproducible-pipeline-2026-09-20/</loc>
+    <lastmod>2026-09-20</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/publish-failure-visibility-2026-09-19/</loc>
+    <lastmod>2026-09-19</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/metadata-contract-2026-09-18/</loc>
+    <lastmod>2026-09-18</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/content-contract-structure-2026-09-17/</loc>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/kst-publish-timestamp-2026-09-16/</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/retry-backoff-dedup-2026-09-15/</loc>
+    <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/list-verification-pitfalls-2026-09-14/</loc>
+    <lastmod>2026-09-14</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/schedule-guard-daily-publish-2026-09-14/</loc>
+    <lastmod>2026-09-14</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/idempotent-retry-incident-log-2026-09-13/</loc>
+    <lastmod>2026-09-13</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/post-publish-verification-2026-09-12/</loc>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/slug-metadata-prevalidation-2026-09-11/</loc>
+    <lastmod>2026-09-11</lastmod>
+  </url>
+  <url>
+    <loc>https://home.bungae.site/blog/db-first-tech-blog-publishing-2026-09-10/</loc>
+    <lastmod>2026-09-10</lastmod>
   </url>
   <url>
     <loc>https://home.bungae.site/blog/pages-deploy-verify/</loc>
