@@ -9,6 +9,8 @@
 <meta property="og:title" content="김총무 — 모임, 일상, 정보까지 챙기는 올인원 파트너">
 <meta property="og:description" content="모임 정산, 미니게임, 오늘의 운세와 뉴스를 한곳에서. 올인원 파트너 김총무">
 <meta property="og:image" content="https://home.bungae.site/assets/products/kalchongmu.png">
+<link rel="canonical" href="https://home.bungae.site/">
+<meta property="og:url" content="https://home.bungae.site/">
 <script>
 (function () {
   try {
@@ -20,11 +22,11 @@
 </script>
 <style>
 :root{
-  --paper:#F6F7F9; --ink:#16212F; --muted:#5A6C80; --card:#FFFFFF; --line:#DFE5EC;
-  --accent:#16365C; --accent-ink:#FFFFFF; --accent-soft:#E8EEF5; --eyebrow:#3D5A7A;
-  --navy:#12283F; --pill-shadow:0 10px 24px rgba(22,54,92,.16);
-  --dark-paper:#0F151E; --dark-ink:#D6DDE6; --dark-muted:#97A6B9; --dark-card:#18222F;
-  --dark-line:#2B3A4E; --dark-accent:#8FB0D1;
+--paper:#F6F7F9; --ink:#16212F; --muted:#5A6C80; --card:#FFFFFF; --line:#DFE5EC;
+--accent:#16365C; --accent-ink:#FFFFFF; --accent-soft:#E8EEF5; --eyebrow:#3D5A7A;
+--navy:#12283F; --pill-shadow:0 10px 24px rgba(22,54,92,.16);
+--dark-paper:#0F151E; --dark-ink:#D6DDE6; --dark-muted:#97A6B9; --dark-card:#18222F;
+--dark-line:#2B3A4E; --dark-accent:#8FB0D1;
 }
 html[data-theme=dark]{--paper:var(--dark-paper);--ink:var(--dark-ink);--muted:var(--dark-muted);--card:var(--dark-card);--line:var(--dark-line);--accent:var(--dark-accent);--accent-ink:#0F151E;--accent-soft:#1D2B3E;--eyebrow:var(--dark-accent)}
 *,*:before,*:after{box-sizing:border-box}
@@ -189,7 +191,7 @@ footer.site{background:var(--card);border-top:1px solid var(--line);margin-top:0
   .nav a.link{padding:11px 12px}
   .menu-btn{display:inline-block}
   .nav-cta{display:none}
-  .stats-grid{grid-template-columns:minmax(0,1fr);gap:26px;padding:44px 20px}
+  .stats-grid{grid-template-columns:minmax(0,1fr)}
   section.block{padding:56px 0}
   .steps{grid-template-columns:minmax(0,1fr)}
   .foot-grid{grid-template-columns:minmax(0,1fr)}
@@ -236,7 +238,7 @@ footer.site{background:var(--card);border-top:1px solid var(--line);margin-top:0
         <div class="hero-thumbs">
           <a class="hero-thumb" href="https://www.bungae.site/fortune"><img src="/assets/products/kokdosa.png" alt="김총무 운세 — 오늘의 운세 카드 선택 화면" width="800" height="330" loading="eager" fetchpriority="high"><span><b>운세</b>오늘을 가볍게</span></a>
           <a class="hero-thumb" href="https://www.bungae.site/games"><img src="/assets/products/ttakseonsu.png" alt="김총무 게임 — 2048 미니게임 화면" width="700" height="560" loading="eager"><span><b>게임</b>모임에 활기를</span></a>
-          <a class="hero-thumb" href="https://www.bungae.site/"><img src="/assets/products/kalchongmu.png" alt="김총무 정산 — 모임 정산 시작 화면" width="720" height="280" loading="eager"><span><b>정산</b>계산은 확실하게</span></a>
+          <a class="hero-thumb" href="https://www.bungae.site/"><img src="/assets/products/kalchongmu.png" alt="김총무 정산 — 모임 정산 시작 화면" width="720" height="280" loading="eager"><span><b>정산</b>계산은 확실히</span></a>
         </div>
       </figure>
     </div>
@@ -408,7 +410,7 @@ footer.site{background:var(--card);border-top:1px solid var(--line);margin-top:0
     var t = document.documentElement.getAttribute('data-theme');
     if (btn) btn.textContent = t === 'dark' ? '라이트 모드' : '다크 모드';
   }
-  if (btn) btn.addEventListener('click', function () {
+  if (btn) btn.addEventListener("click", function () {
     var cur = document.documentElement.getAttribute('data-theme');
     var next = cur === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
